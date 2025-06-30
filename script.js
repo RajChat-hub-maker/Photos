@@ -1,7 +1,7 @@
 const images = [
-  { filename: "photo1.jpg", caption: "Office Day 1" },
-  { filename: "photo2.jpg", caption: "Tool Screenshot" },
-  { filename: "photo3.jpg", caption: "Team Meetup" }
+  { filename: "photo1.png", caption: "Office Day 1" },
+  { filename: "photo2.png", caption: "Tool Screenshot" },
+  { filename: "photo3.png", caption: "Team Meetup" }
   // Add more images here
 ];
 
