@@ -1,8 +1,9 @@
 const images = [
-  { filename: "photo1.png", caption: "Office Day 1" },
-  { filename: "photo2.png", caption: "Tool Screenshot" },
-  { filename: "photo3.png", caption: "Team Meetup" }
-  // Add more images here
+  { filename: "photo1.jpg", caption: "Office Day 1" },
+  { filename: "photo2.jpg", caption: "Tool Screenshot" },
+  { filename: "photo3.jpg", caption: "Team Meetup" },
+  { filename: "photo4.jpg", caption: "Version 2.0 Release" },
+  { filename: "photo5.jpg", caption: "Behind the Scenes" }
 ];
 
 function createGalleryItem(image) {
@@ -17,9 +18,9 @@ function createGalleryItem(image) {
   const actions = document.createElement('div');
   actions.className = 'actions';
 
-  // Download
   const downloadBtn = document.createElement('button');
-  downloadBtn.textContent = '⬇️ Download';
+  downloadBtn.textContent = '⬇️';
+  downloadBtn.title = 'Download';
   downloadBtn.onclick = () => {
     const link = document.createElement('a');
     link.href = img.src;
@@ -27,16 +28,15 @@ function createGalleryItem(image) {
     link.click();
   };
 
-  // Delete (frontend only)
   const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '🗑️ Delete';
+  deleteBtn.textContent = '🗑️';
+  deleteBtn.title = 'Delete';
   deleteBtn.onclick = () => {
     wrapper.remove();
   };
 
   actions.appendChild(downloadBtn);
   actions.appendChild(deleteBtn);
-
   wrapper.appendChild(img);
   wrapper.appendChild(actions);
   return wrapper;
